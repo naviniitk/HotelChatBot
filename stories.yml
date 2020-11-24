@@ -1,0 +1,52 @@
+version: "2.0"
+
+stories:
+
+- story: arrange_for_booking
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: booking
+  - action: action_book_rooms_details
+  
+- story: faq_check_breakfast
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faqs_breakfast
+  - action: utter_faqs_breakfast
+  
+- story: faq_cancellation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faqs_cancellation
+  - action: utter_faqs_cancellation
+
+- story: faq_check_in
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faqs_check_in
+  - action: utter_faqs_check_in
+  
+- story: faq_check_out
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faqs_check_out
+  - action: utter_faqs_check_out
+  
+- story: faq_restaurant
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faqs_restaurant
+  - action: utter_faqs_restaurant
+
+- story: clean_room
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: cleaning
+  - action: utter_cleaning

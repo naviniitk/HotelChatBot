@@ -1,0 +1,100 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - booking
+  - cleaning
+  - faqs_check_in
+  - faqs_check_out
+  - faqs_restaurant
+  - faqs_cancellation
+  - faqs_breakfast
+
+actions:
+  - action_book_rooms
+  - action_book_rooms_details
+  # - action_clean_room
+  - utter_greet
+  - utter_booking
+  - utter_cleaning
+  - utter_clean_room
+  - utter_faqs_check_in
+  - utter_faqs_check_out
+  - utter_faqs_breakfast
+  - utter_faqs_cancellation
+  - utter_faqs_restaurant
+  - utter_goodbye
+
+forms:
+  - book_room_form
+
+entities:
+  - no_of_people
+  - no_of_rooms
+  - type_of_room
+  - time_of_cleaning
+
+
+responses:
+  utter_greet:
+  - text: "Hi, How may I help?"
+
+  utter_default:
+  - text: "sorry, I didn't get that, can you rephrase?"
+  
+  utter_booking:
+  - text: "How many rooms would you like to book?"
+  - text: "What type of room would you want to book?"
+    buttons:
+      - title: "simple"
+        payload: "Simple Room"
+      - title: "deluxe"
+        payload: "Deluxe Room"
+  
+    
+  utter_cleaning:
+  - text: "When should I arrange for a cleaning?"
+  
+  utter_clean_room:
+  - text: "Sure, I will send someone to your room right away."
+  
+  utter_goodbye:
+  - text: "Bye"
+  
+  utter_faqs_check_in:
+  - text: "Check-in time starts at 4 PM. Minimum check-in age is 21. Please contact the reception for early check-in requests."
+  
+  utter_faqs_check_out:
+  - text: "Check-out time is 11 AM. Please contact the reception for late checkout requests."
+  
+  utter_faqs_cancellation:
+  - text: "To cancel a reservation, select the “Reservations” link from the homepage."
+  - text: "On the Reservations page, under the heading ‘View, Change or Cancel a Reservation,’ enter your confirmation number, and either the last name on the reservation or the last four digits of the credit card used to make the reservation."
+  - text: "The booking deposit is refundable if the cancellation occurs at least 15 days before arrival. For cancellations made after this limit, a penalty will be imposed based on the cancellation policy."
+  
+  utter_faqs_restaurant:
+  - text: "Yes, the hotel has a restaurant called the Zephyr Bar. With our menu we strive to reflect the historic art and the spirit of our neighborhood by offering a glimpse into what makes our area unique."
+  - text: "Our restaurant serves a dazzling 24-hour menu."
+  
+  utter_faqs_breakfast:
+  - text: "The hotel provides its guests with a free made-to-order breakfast each morning."
+  - text: "Monday through Friday breakfast is 6 am to 9 am. On Saturday and Sunday, we are open from 7 am to 10:30 am."
+
+
+slots:
+  no_of_rooms:
+    auto_fill: false
+    type: unfeaturized
+
+  type_of_room:
+    auto_fill: false
+    type: categorical
+    values:
+    - simple
+    - deluxe
+
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

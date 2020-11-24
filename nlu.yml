@@ -1,0 +1,94 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    
+- intent: booking
+  examples: |
+    - I want to book a room
+    - please book a room for me
+    - I have to book a room
+    - book a room
+    - book a room please
+    - I want a room to be booked
+    - I want to do room booking
+    - I want to book a room for today
+    - I want to book a room for tomorrow
+    - book a room for 3 people
+    - I would like to book 2 rooms for tomorrow
+
+- intent: cleaning
+  examples: |
+    - clean my room
+    - room cleaning needed
+    - I want my room to be cleaned
+    - please send someone to clean my room
+    - I want to have my room cleaned
+
+
+- intent: faqs_check_in
+  examples: |
+    - what are your check-in timings?
+    - when can I check-in?
+    - what is the time to check-in?
+    - when should I check-in?
+    - at what time can I check-in?
+    - what are the check-in timings?
+    - what is check-in timing?
+    - what time should I check-in?
+    
+- intent: faqs_check_out
+  examples: |
+    - what are your check-out timings?
+    - when can I check-out?
+    - what is the time to check-out?
+    - when should I check-out?
+    - at what time can I check-out?
+    - what are the check-out timings?
+    - what is check-out timing?
+    - what time should I check-out?
+    
+- intent: faqs_cancellation
+  examples: |
+    - How can I cancel the reservation?
+    - What is the cancellation policy?
+    - what is your cancellation policy?
+    - cancellation policy
+    - what are the steps to cancel the reservation?
+    - How to cancel the reservation?
+    - what do I have to do to cancel the reservation?
+    
+- intent: faqs_restaurant
+  examples: |
+    - does the hotel have a restaurant?
+    - can I find a restaurant in your hotel?
+    
+- intent: faqs_breakfast
+  examples: |
+    - is breakfast available?
+    - does the hotel offer breakfast?
+    - what are the breakfast timings?
